@@ -9,7 +9,7 @@ Start server:
 ```
 cd .\server\
 npm install
-npm start
+node .\server.mjs
 ```
 
 Start Web server

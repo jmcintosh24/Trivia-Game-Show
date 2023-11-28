@@ -1,0 +1,49 @@
+body {
+    color: white;
+}
+
+.scoreboard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: 0px;
+      padding: 10px;
+}
+  
+.table td,
+.table th {
+    height: 40px;
+    padding: 0px;
+    padding-bottom: 2px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+}
+
+.table {
+    border-collapse: collapse;
+    border-color: black;
+}
+
+.table th {
+    height: 40px;
+    background-color: #ce5cc4; 
+    font-family: "Open Sans",arial;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 800;
+    padding: 10px;
+}
+
+.table td {
+    padding: 8px;
+    border-bottom: 1px solid rgb(225, 210, 210);
+}
+
+.table td:first-child {
+    width: 50px;
+}
+
+.table td:not(:first-child) {
+    text-align: center;
+    width: 100px;
+}

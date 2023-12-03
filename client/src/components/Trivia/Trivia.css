@@ -1,11 +1,52 @@
-body {
-    font-family: Arial, sans-serif;
-}
-   
-h1 {
-text-align: center;
-}
-
-button {
-margin: 10px;
-}
+.trivia-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .trivia-title {
+    text-align: center;
+  }
+  
+  .trivia-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .trivia-question {
+    text-align: center;
+  }
+  
+  .trivia-answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+  }
+  
+  .trivia-answer-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: purple;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .trivia-score-time {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 50px;
+  }
+  

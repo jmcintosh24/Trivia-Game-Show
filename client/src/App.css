@@ -1,6 +1,9 @@
 /*
     Monitor image and CSS sourced from: https://dev.to/ekeijl/retro-crt-terminal-screen-in-css-js-4afh
 */
+* {
+    font-family: "Open Sans",arial;
+}
 #screen {
     position: relative;
     width: 100%;

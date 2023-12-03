@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Trivia.css';
 
 class Trivia extends Component {
   constructor(props) {
@@ -86,33 +87,46 @@ class Trivia extends Component {
 
   render() {
     const { questions, currentQuestionIndex, score, timer, loading } = this.state;
-    const currentQuestion = questions[currentQuestionIndex];
-
+  
     if (loading) {
       return <div>Loading...</div>;
     }
-
+  
     if(this.state.firstQuestion) {
       this.shuffleQuestions();
       this.setState({firstQuestion : false});
     }
-
+  
+    const currentQuestion = questions[currentQuestionIndex];
+  
     return (
-      <div>
-        <h1>Trivia</h1>
-        <div>
-          <p>{decodeURIComponent(currentQuestion.question)}</p>
-          {this.state.answerChoices.map((answer, index) => (
-            <button key={index} onClick={() => this.handleAnswerClick(answer)}>
-              {decodeURIComponent(answer)}
-            </button>
-          ))}
+      <div className="trivia-container">
+        <h1 className="trivia-title">Question {currentQuestionIndex + 1}/20</h1>
+        <div className="trivia-content">
+          {currentQuestion ? (
+            <>
+              <p className="trivia-question">{decodeURIComponent(currentQuestion.question)}</p>
+              <div className="trivia-answers">
+                {this.state.answerChoices.map((answer, index) => (
+                  <button key={index} onClick={() => this.handleAnswerClick(answer)} className="trivia-answer-button">
+                    {decodeURIComponent(answer)}
+                  </button>
+                ))}
+              </div>
+            </>
+          ) : (
+            <p>Loading question...</p>
+          )}
         </div>
-        <p>Time remaining: {timer}s</p>
-        <p>Score: {score}</p>
+        <div className="trivia-score-time">
+          <p>Time remaining: {timer}s</p>
+          <p>Score: {score}</p>
+        </div>
       </div>
     );
   }
+  
+  
 }
 
 export default Trivia;

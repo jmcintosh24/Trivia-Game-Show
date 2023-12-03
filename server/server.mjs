@@ -38,7 +38,7 @@ router.get("/getScoreboard", async (req, res) => {
   res.send(results).status(200);
 });
 
-// post a new scoreboard entry
+// post a new scoreboard entry with the current date
 router.post("/postScore", async (req, res) => {
   let dateObj = new Date();
   let month = dateObj.getUTCMonth() + 1; //months from 1-12

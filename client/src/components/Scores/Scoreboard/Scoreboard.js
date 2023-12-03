@@ -49,7 +49,7 @@ class Scoreboard extends Component {
             },
             body: JSON.stringify({
                 username: this.state.username,
-                score: this.state.score, // You can replace this with the actual score
+                score: this.props.score, // You can replace this with the actual score
             }),
         })
             .then(response => {
@@ -76,9 +76,14 @@ class Scoreboard extends Component {
             key: index,
         }));
 
+        // Sort the scoreboard based on scores
+        players.sort((a, b) => (b.score > a.score) ? 1 : -1);
+
         return (
-            <div className="scoreboard">
+            <div className="scoreboard-container">
+                Score: {this.props.score}
                 <div className="username-input">
+                    
                     <label>Enter Username: </label>
                     <input
                         type="text"

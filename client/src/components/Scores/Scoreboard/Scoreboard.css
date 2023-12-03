@@ -2,20 +2,19 @@ body {
     color: white;
 }
 
-.scoreboard {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-top: 0px;
-      padding: 10px;
+.scoreboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+  
   
 .table td,
 .table th {
     height: 40px;
     padding: 0px;
     padding-bottom: 2px;
-    font-family: 'Open Sans';
     font-weight: bold;
 }
 

@@ -13,10 +13,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// get the path to the current directory
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const viewsPath = __dirname + '/views/';
-//app.use(express.static(viewsPath));
+app.use(express.static(viewsPath));
 
 const router = express.Router();
 

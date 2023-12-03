@@ -11,7 +11,7 @@ class Trivia extends Component {
       timer: 20,
       loading: true,
       answerChoices: [],
-      firstQuestion: true // necessary to shuffle the choices for first question
+      firstQuestion: true
     };
   }
 
